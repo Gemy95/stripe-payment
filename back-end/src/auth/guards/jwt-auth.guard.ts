@@ -11,8 +11,6 @@ export class JwtAuthGuard implements CanActivate {
     const request: Request = context.switchToHttp().getRequest();
     const header = request.header('Authorization');
        
-    console.log("request=",request)
-
     if (!header) {
       throw new HttpException(
         'Authorization: Bearer <token> header missing',
