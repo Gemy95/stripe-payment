@@ -45,6 +45,7 @@ const PaymentForm = () => {
       return;
     }
 
+    // 5555 5555 5555 4444 as test master card
     const stripeResponse = await stripe.createPaymentMethod({
       type: "card",
       card: cardElement,
